@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="headerInfo"></h1>
+        <div id="results"></div>
+    </div>
+    <div class="my-friends">
+ 
+    </div>
+    <script id="user-template" type="text/x-handlebars-template">
+        <div class="friends">
+            {{#each items}}
+            <div class="friend">
+                <img src="{{photo_100}}"/>
+                <div>{{first_name}} {{last_name}}</div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
